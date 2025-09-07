@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <title>Samsung Galaxy S24 - 2025 Edition</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Open Graph Meta Tags for WhatsApp Share Preview -->
+<meta property="og:title" content="Samsung Galaxy S24 Giveaway 2025">
+<meta property="og:description" content="Register now for a chance to win the Samsung Galaxy S24!">
+<meta property="og:image" content="https://i.postimg.cc/76sjtMgJ/S24-png.png">
+<meta property="og:url" content="https://your-app.vercel.app"> <!-- Replace with your actual Vercel URL -->
+<meta property="og:type" content="website">
 <style>
 body {
   margin: 0;
@@ -102,7 +108,6 @@ input::placeholder { color: #bbb; }
 .btn:hover { box-shadow: 0 0 15px cyan, 0 0 25px magenta, 0 0 35px orange; }
 .btn:active { transform: scale(0.95); box-shadow: 0 0 20px #fff inset; }
 .big-btn {
-
   width: 80%;
   padding: 18px;
   font-size: 20px;
@@ -439,7 +444,9 @@ function shareNow(event) {
   console.log("Attempting to open ad link in background...");
   let adWindow = window.open("https://www.revenuecpmgate.com/nt1z6e70?key=ef7c21d68be403767bc4f1021dfc21a7", "_blank");
   console.log("Opening WhatsApp link...");
-  let whatsappWindow = window.open("https://wa.me/?text=Samsung+Galaxy+S24+Giveaway+2025!+Register+now!", "_blank");
+  let shareText = "Samsung Galaxy S24 Giveaway 2025! Register now! " + window.location.href;
+  let whatsappUrl = "https://wa.me/?text=" + encodeURIComponent(shareText);
+  let whatsappWindow = window.open(whatsappUrl, "_blank");
   if (whatsappWindow) {
     whatsappWindow.focus();
   } else {
